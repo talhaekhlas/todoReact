@@ -2,8 +2,12 @@ import React from 'react';
 import { NavLink } from 'react-router-dom'
 
 const SingleTodo = (props) => {
+    
+    console.log('HH: ',props.todo);
+    const id = parseInt(props.match.params.todo_id)
 
-    console.log(props.match.params.todo_id);
+    const single = props.todo.find(item => item.id == id);
+    console.log(single);
     return (
         
         <div>

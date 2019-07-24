@@ -18,8 +18,8 @@ const Todo = (props) => {
                 <div className="card-content">
                 <span className="card-title">{ninja.name}</span>
                 <NavLink className="btn btn-outline-primary"  to={'/todo/'+ninja.id}>edit</NavLink>&nbsp;&nbsp;
-                {/* <button className="btn btn-outline-danger"  onClick={props.deleteTodo(ninja.id)}>delete</button> */}
-                <button className="btn btn-outline-danger"  >delete</button>
+                <button className="btn btn-outline-danger"  onClick={ () => props.deleteTodo(ninja.id)}>delete</button>
+                {/* <button className="btn btn-outline-danger"  >delete</button> */}
                 </div>
             
               
