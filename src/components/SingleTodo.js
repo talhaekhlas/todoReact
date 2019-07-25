@@ -52,7 +52,7 @@ const SingleTodo = (props) => {
                     <div className="row">
                         <div className="input-field col s6">
                             {/* <input  id="name" type="text" name="name" onChange={() => props.changeInput()} value={name} />  */}
-                            <input  id="name" type="text" name="name" onChange={props.changeInput} value={name} /> 
+                            <input  id="name" type="text" name="name" onChange={props.changeInput} value={props.todoName} /> 
                         </div>
                     </div>
                     <div className="row">

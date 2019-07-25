@@ -8,7 +8,8 @@ import SingleTodo from "./components/SingleTodo";
 
 class App extends Component {
   state = {
-    todo: []
+    todo: [],
+    todoName:''
   };
 
   componentDidMount() {
@@ -39,6 +40,9 @@ class App extends Component {
   changeInput = (e)=>{
     
     console.log(e.target.value);
+    this.setState({
+      todoName:e.target.value
+    })
   }
 
   updateTodo = id => {};
@@ -74,7 +78,7 @@ class App extends Component {
               path="/todo/:todo_id"
              
               render={props => (
-                <SingleTodo {...props}  todo={this.state.todo} deleteTodo={this.deleteTodo} changeInput={this.changeInput} />
+                <SingleTodo {...props} todoName={this.state.todoName}  todo={this.state.todo} deleteTodo={this.deleteTodo} changeInput={this.changeInput} />
               )}
             />
 
