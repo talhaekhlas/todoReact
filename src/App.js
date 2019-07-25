@@ -36,6 +36,11 @@ class App extends Component {
       });
   };
 
+  changeInput = (e)=>{
+    
+    console.log(e.target.value);
+  }
+
   updateTodo = id => {};
 
   render() {
@@ -69,7 +74,7 @@ class App extends Component {
               path="/todo/:todo_id"
              
               render={props => (
-                <SingleTodo {...props}  todo={this.state.todo} deleteTodo={this.deleteTodo} />
+                <SingleTodo {...props}  todo={this.state.todo} deleteTodo={this.deleteTodo} changeInput={this.changeInput} />
               )}
             />
 
